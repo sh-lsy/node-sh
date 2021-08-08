@@ -1,0 +1,6 @@
+[2021-04-07T15:00:34.509] [DEBUG] cheese - [Object: null prototype] { id: '2', name: 'sky', from: '成都' }
+[2021-04-07T15:00:34.512] [DEBUG] cheese - id%3A2%2Fname%3Asky%2Ffrom%3A%E6%88%90%E9%83%BD
+[2021-04-07T15:00:34.512] [DEBUG] cheese - id:2/name:sky/from:成都
+[2021-04-07T15:00:34.512] [DEBUG] cheese - id:2;name:sky;from:%E6%88%90%E9%83%BD
+[2021-04-07T15:00:34.512] [DEBUG] cheese - [Object: null prototype] { id: '2', name: 'sky', from: '成都' }
+[2021-04-07T15:00:34.513] [DEBUG] cheese - id:2;name:sky;from:成都

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>index</title>
+  <link rel="shortcut icon" href="//www.baidu.com/favicon.ico?t=20171027" type="image/x-icon">
+  <link rel="stylesheet" href="./css/reset.css">
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+  <script src="./js/template-web.js"></script>
+  <script src="./js/index.js"></script>
+</head>
+<body>
+  <h1>index</h1>
+  <!-- <img src="./img/11.jpg" alt="" width="200"> -->
+  <button id="btn">获取list</button>
+  <ul id="myul">
+  </ul>
+  <script>
+    $('#btn').click(() => {
+      $.ajax({
+        url: '/api/list',
+        success(res) {
+          // console.log(JSON.parse(res))
+          console.log(typeof res.data)
+          // res.data.map(item => {
+          //   $('#myul').append(`<li>${item}</li>`);
+          // })
+          let templateStr = `
+            {{each data}}
+              <li>{{$value}}</li>
+            {{/each}}
+          `
+          let html = template.render(templateStr, {
+            data: res.data
+          })
+          $('#myul').append(html);
+          // $.each(res.data,(i, val) => {
+          //   $('#myul').append(`<li>${val}</li>`);
+          // })
+        }
+      })
+    })
+
+  </script>
+</body>
+</html>

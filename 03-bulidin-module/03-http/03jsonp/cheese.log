@@ -1,0 +1,14 @@
+[2021-04-08T11:56:49.382] [DEBUG] cheese - URL {
+  href: 'http://127.0.0.1:9000/api/data?cb=getData',
+  origin: 'http://127.0.0.1:9000',
+  protocol: 'http:',
+  username: '',
+  password: '',
+  host: '127.0.0.1:9000',
+  hostname: '127.0.0.1',
+  port: '9000',
+  pathname: '/api/data',
+  search: '?cb=getData',
+  searchParams: URLSearchParams { 'cb' => 'getData' },
+  hash: ''
+}
